@@ -1,0 +1,5 @@
+body { font-family: Arial; background: #f4f4f4; padding: 20px; }
+h1 { color: #333; }
+#summary { margin-top: 20px; padding: 10px; background: white; border: 1px solid #ddd; }
+button { padding: 10px; background: #007bff; color: white; border: none; cursor: pointer; }
+input { padding: 10px; margin-right: 10px; }

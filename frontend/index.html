@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>News Agent</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Tin tức tổng hợp hàng ngày</h1>
+    <input type="text" id="topic" placeholder="Lĩnh vực (e.g., AI machine learning)">
+    <button onclick="fetchNews()">Lấy tin</button>
+    <div id="summary"></div>
+
+    <script>
+        function fetchNews() {
+            const topic = document.getElementById('topic').value || 'AI machine learning';
+            fetch(`/get_news/${topic}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('summary').innerText = data.summary || 'No data';
+                });
+        }
+    </script>
+</body>
+</html>
